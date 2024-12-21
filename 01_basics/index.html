@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <!-- <div class="bg-black">
+        <h1 id="title" class="heading">DOM learning on repository</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+
+        <ul>
+            <li class = "list-item">Lorem ipsum dolor sit amet.</li>
+            <li class = "list-item">Lorem ipsum dolor sit amet.</li>
+            <li class = "list-item">Lorem ipsum dolor sit amet.</li>
+        </ul>
+    </div> -->
+    <div class="parent" >
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent.children); // selecting child from parent
+    // console.log(parent.children[1].innerHTML); // access child val for display use innerHTML
+    
+    for (let i = 0; i < parent.children.length; i++) {
+        // console.log(parent.children[i].innerHTML);        
+    }
+    parent.children[2].style.padding = "10px" // change val of child from parent
+    parent.children[2].style.color = "orange"
+
+    // console.log((parent.firstElementChild)); // 1st val
+    // console.log((parent.lastElementChild)); // last val
+
+const dayOne = document.querySelector('.day')
+// console.log(dayOne.parentElement); // access from child to parent
+// console.log(dayOne.nextElementSibling); // next ele
+
+console.log("NODE : ", parent.childNodes); // dom nodes(11) = consider line break (text node)
+
+</script>
+</html>
+
