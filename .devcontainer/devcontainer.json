@@ -12,7 +12,7 @@
 	"forwardPorts": [5500],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "yarn install",
+	// "postCreateCommand": "",
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -28,12 +28,7 @@
 				"terminal.integrated.fontSize": 18,
 				"editor.wordWrap": "on",
 				"liveServer.settings.port": 5500,
-				"liveServer.settings.root": "/",
-				"liveServer.settings.NoBrowser": false,
-				"liveServer.settings.AdvanceCustomBrowserCmdLine": "",
-				"liveServer.settings.wait": 0,
-				"liveServer.settings.fullReload": true,
-				"liveServer.settings.useLocalIp": true
+				"liveServer.settings.root": "/"
 			}
 		}
 	}
