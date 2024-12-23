@@ -27,6 +27,7 @@
     <!-- --------------  -->
     <ul class="language">
         <li>javascript</li>
+        
     </ul>
 </body>
 <script>
@@ -73,14 +74,39 @@
 // document.body.appendChild(div)
 
 // ------------------adding html element from script
-function addLang(langName) { 
-    const li = document.createElement('li')
-    li.innerHTML = `${langName}`
-    document.querySelector('.language').appendChild(li)
-}
-addLang("java")
-addLang("jQuery")
+// function addLang(langName) { 
+//     const li = document.createElement('li')
+//     li.innerHTML = `${langName}`
+//     document.querySelector('.language').appendChild(li)
+// }
+// addLang("java")
+// addLang("jQuery")
 
+// optimized way 
+// function addOptiLang(langName) {
+//     const li = document.createElement('li')
+//     li.appendChild(document.createTextNode(langName))
+//     document.querySelector('.language').appendChild(li)
+// }
+// addLang("css")
+
+
+// Edit
+// const secondLang = document.querySelector("li:nth-child(2)")
+// secondLang.innerHTML = "python"
+
+// const newLi = document.createElement('li')
+// newLi.textContent = "html"
+// ------------- 
+// secondLang.replaceWith(newLi)
+
+// Edit
+// const firstLang = document.querySelector("li:first-child")
+// firstLang.outerHTML = '<li>typescript</li>'
+
+// remove 
+// const lastLang = document.querySelector('li:last-child')
+// lastLang.remove() 
 </script>
 </html>
 
