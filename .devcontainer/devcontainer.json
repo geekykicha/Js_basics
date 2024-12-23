@@ -20,15 +20,12 @@
 			"extensions": [
 				"esbenp.prettier-vscode",
 				"vscode-icons-team.vscode-icons",
-				"wayou.vscode-todo-highlight",
-				"ritwickdey.liveserver"
+				"wayou.vscode-todo-highlight"
 			],
 			"settings": {
 				"editor.fontSize": 18,
 				"terminal.integrated.fontSize": 18,
-				"editor.wordWrap": "on",
-				"liveServer.settings.port": 5500,
-				"liveServer.settings.root": "/"
+				"editor.wordWrap": "on"
 			}
 			
 		}
