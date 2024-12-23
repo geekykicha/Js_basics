@@ -16,29 +16,34 @@
             <li class = "list-item">Lorem ipsum dolor sit amet.</li>
         </ul>
     </div> -->
-    <div class="parent" >
+    <!-- <div class="parent" >
         <div class="day">Monday</div>
         <div class="day">Tuesday</div>
         <div class="day">Wednesday</div>
         <div class="day">Thursday</div>
         <div class="day">Friday</div>
-    </div>
+    </div> -->
+
+    <!-- --------------  -->
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
 </body>
 <script>
-    const parent = document.querySelector('.parent')
+    // const parent = document.querySelector('.parent')
     // console.log(parent.children); // selecting child from parent
     // console.log(parent.children[1].innerHTML); // access child val for display use innerHTML
     
-    for (let i = 0; i < parent.children.length; i++) {
+    // for (let i = 0; i < parent.children.length; i++) {
         // console.log(parent.children[i].innerHTML);        
-    }
-    parent.children[2].style.padding = "10px" // change val of child from parent
-    parent.children[2].style.color = "orange"
+    // }
+    // parent.children[2].style.padding = "10px" // change val of child from parent
+    // parent.children[2].style.color = "orange"
 
     // console.log((parent.firstElementChild)); // 1st val
     // console.log((parent.lastElementChild)); // last val
 
-const dayOne = document.querySelector('.day')
+// const dayOne = document.querySelector('.day')
 // console.log(dayOne.parentElement); // access from child to parent
 // console.log(dayOne.nextElementSibling); // next ele
 
@@ -46,19 +51,36 @@ const dayOne = document.querySelector('.day')
 
 //  -------------------
 // create new elements
-const div = document.createElement('div')
-console.log(div);
-// add attributes
-div.className = "main"
-div.id = Math.round(Math.random() *10 +1)
-div.setAttribute("title", "generate title")
-div.style.backgroundColor = "orange"
-// div.innerText = "adding main text"
-const addText = document.createTextNode("adding main text with another method")
-div.appendChild(addText)
-// insert in web page
+// const div = document.createElement('div')
+// console.log(div);
+// // add attributes
+// div.className = "main"
+// div.id = Math.round(Math.random() *10 +1)
+// div.setAttribute("title", "generate title")
+// div.style.backgroundColor = "orange"
+// // div.innerText = "adding main text"
+// const addText = document.createTextNode("adding main text with another method")
+// div.appendChild(addText)
+// // insert in web page
 
-document.body.appendChild(div)
+// document.body.appendChild(div)
+
+// ----practice
+// const div = document.createElement('div')
+// div.className = "Newdiv"
+// div.style.backgroundColor = "blue"
+// div.innerText = "helooo"
+// document.body.appendChild(div)
+
+// ------------------adding html element from script
+function addLang(langName) { 
+    const li = document.createElement('li')
+    li.innerHTML = `${langName}`
+    document.querySelector('.language').appendChild(li)
+}
+addLang("java")
+addLang("jQuery")
+
 </script>
 </html>
 
