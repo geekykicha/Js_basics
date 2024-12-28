@@ -1,0 +1,15 @@
+body{
+    background-color: #212121;
+    color: #fff;
+    width: 300px;
+    min-width: 450px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+#wrapper{
+    width: 450px;
+    height: 550px;
+    font-size: 25px;
+    background-color: #414141;
+    color: #fff;
+}
