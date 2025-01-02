@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Learning</title>
+</head>
+<body>
+    <!-- setTimeout -->
+
+    <!-- <h1>Hello World</h1>
+    <button id="stop">stop</button> -->
+
+    <!-- setInterval -->
+     <h1>Me And JS</h1>
+     <button id="start">start</button>
+     <button id="stop">stop</button>
+</body>
+<script>
+    // ----------- setTimeout(run after given time)
+    // setTimeout(function(){
+    //     console.log("krishna");
+        
+    // },2000)
+
+    //other way
+    // const sayKrishna = function(){
+    //     console.log("krishna");
+    // }
+    // setTimeout(sayKrishna, 2000)
+
+    // const changeText = function(){
+    //     document.querySelector('h1').innerHTML = "The JS Learner"
+    //     }
+    //     setTimeout(changeText, 2000)
+
+    
+    // const changeText = function(){
+    //     document.querySelector('h1').innerHTML = "The JS Learner"
+    //     }
+    //     const changMe = setTimeout(changeText, 2000)
+
+        //clearTimeout(changMe) // stop the timeout
+
+        // If button clicked stop interval
+        // document.querySelector('#stop').addEventListener('click', function(){
+        //     clearTimeout(changMe)
+        //     console.log("stopped");
+        // })
+//  ------------------ setInterval(run every time with given time)
+// setInterval(function(){
+//     console.log("hello");
+    
+// },3000)
+const changeText = function(){
+        document.querySelector('h1').innerHTML = "The JS Learner"
+        }
+let interval;
+document.querySelector('#start').addEventListener('click', function(){
+    interval = setInterval(changeText, 3000)
+})
+document.querySelector('#stop').addEventListener('click', function(){
+    clearInterval(interval)
+})
+</script>
+</html>

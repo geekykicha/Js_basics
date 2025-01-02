@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Learing</title>
+</head>
+<body>
+    <ul id="NewYwearPics">
+        
+        <li><img width="200px" id="newYear" src="https://images.pexels.com/photos/29957518/pexels-photo-29957518/free-photo-of-festive-2025-light-display-in-urban-setting.jpeg?auto=compress&cs=tinysrgb&w=600" alt="New Year 2025"></li>
+        
+        <li><img width="200px" id="cake" src="https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg?auto=compress&cs=tinysrgb&w=600" alt="New Year 2025" onclick="alert('clicked')"></li>
+        
+        <li><img width="200px" id="gathering" src="https://images.pexels.com/photos/2735037/pexels-photo-2735037.jpeg?auto=compress&cs=tinysrgb&w=600"></li>
+        
+        <li><img width="200px" id="cracker" src="https://images.pexels.com/photos/27073311/pexels-photo-27073311/free-photo-of-fireworks-above-hanoi.jpeg?auto=compress&cs=tinysrgb&w=600"></li>
+        
+        <li><img width="200px" id ="Gifts" src="https://images.pexels.com/photos/264787/pexels-photo-264787.jpeg?auto=compress&cs=tinysrgb&w=600"></li>       
+
+        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+
+    </ul>
+    
+</body>
+<script>
+    // onclick
+
+    // document.getElementById('cake').onclick = function(){
+    //     alert('you clicked cake')
+    // }
+
+    // best practice
+    // addEventListener = has 3 parameters event, fun, true/false (by default false)
+    // document.getElementById('cake').addEventListener('click', function(){alert('again clicked')},false)
+
+    // eventPropogation(addEventListener last parameter) = captering events in 2 flows
+    // 1. eventBubbling(false) - child to root
+    // 2. eventCapting(true) - root to child
+
+    // document.getElementById('NewYwearPics').addEventListener('click', function(e){
+    //     console.log("happy new year");// ul selecter
+    
+    // }, false)
+    // document.getElementById('gathering').addEventListener('click', function(e){
+    //     console.log("all gathered");// li selected also ul(eventBubbling)
+    
+    // }, false)
+    // // to stop propogation
+    // document.getElementById('gathering').addEventListener('click', function(e){
+    //     console.log('gathered');
+    //     e.stopPropagation()
+    //     e.preventDefault()
+    // }, false)
+
+    // --------------
+    document.querySelector('#NewYwearPics').addEventListener('click', function(e){
+        // console.log(e.target.parentNode);// returns clicked parent
+        // console.log(e.target.tagName);
+        
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            
+        let removeIt = e.target.parentNode
+        removeIt.remove()// remove clicked parent
+
+        }
+        
+        // removeIt.parentNode.removeChild(removeIt) another way
+        
+    })
+
+</script>
+</html>
+
