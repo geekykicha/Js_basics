@@ -79,6 +79,10 @@ async function consumePromiseFive(){
 }
 consumePromiseFive()
 
+// FETCH - The fetch() method of the Window interface starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
+
+// A fetch() promise only rejects when the request fails, for example, because of a badly-formed request URL or a network error only not reject if the server responds with HTTP status codes [404, 504]
+
 // with fetch 
 async function getUserDetail(){
    try {
@@ -100,3 +104,15 @@ fetch('https://api.github.com/users/hiteshchoudhary')
     console.log(data);
 })
 .catch((error) => {console.log(error)})
+
+// The Promise.all() static method takes an iterable of promises as input and returns a single Promise. This returned promise fulfills when all of the input's promises fulfilled o/p in array, if any promise fails no o/p
+
+const promise1 = Promise.resolve(12)
+const promise2 = 45
+const promise3 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 1000, 'foo')
+})
+Promise.all([promise1, promise2, promise3]).then((val) => {
+    console.log(val);
+})
+
