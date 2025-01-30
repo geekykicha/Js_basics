@@ -1,0 +1,33 @@
+<!-- The bind() function creates a new bound function -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            //requirement
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this))
+//The bind() method of Function instances creates a new function that, when called,
+//calls this function with its this keyword set to the provided value
+        }
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);
+        }
+    }
+
+    const app = new React()
+</script>
+</html>
